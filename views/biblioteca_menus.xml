@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+  <menuitem id="biblioteca_menu_root" name="Biblioteca">
+    <menuitem id="biblioteca_principal_category" name="Principal"> 
+      <menuitem id="biblioteca_libros_menu_action" action="biblioteca_libros_action"/>
+    </menuitem>
+    <menuitem id="biblioteca_settings_menu" name="Opciones"> 
+      <menuitem id="biblioteca_editorial_menu_action" action="biblioteca_editorial_action"/>
+      <menuitem id="biblioteca_categorias_menu_action" action="biblioteca_categorias_action"/>
+      <menuitem id="biblioteca_autor_menu_action" action="biblioteca_autor_action"/>
+    </menuitem>
+  </menuitem>
+
+</odoo>

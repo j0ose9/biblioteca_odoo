@@ -5,5 +5,5 @@ class BibliotecaEditorial(models.Model):
   _description="Editoriales"
 
 
-  nombre = fields.Char(string="Editorial", required=True)
+  nombre = fields.Char(string="Nombre Editorial", required=True)
   editorial_id=fields.One2many(comodel_name="biblioteca.libros", inverse_name="editorial")

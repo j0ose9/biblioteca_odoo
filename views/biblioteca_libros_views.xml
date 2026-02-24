@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<odoo>
+  <record id="biblioteca_libros_action" model="ir.actions.act_window">
+    <field name="name">Libros</field>
+    <field name="res_model">biblioteca.libros</field>
+    <field name="view_mode">tree,form,search</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Define los libros aquí
+      </p>
+    </field>
+  </record>
+
+
+
+
+  <record id="biblioteca_libros_view_tree" model="ir.ui.view">
+  <field name="name">biblioteca.libros.tree</field>
+  <field name="model">biblioteca.libros</field>
+  <field name="arch" type="xml">
+    <tree string="Libros">
+      <field name="nombre" string="Titulo"/>
+      <field name="descripcion"/>
+      <field name="lanzamiento"/>
+      <field name="editorial"/>
+      <field name="autor"/>
+      <field name="categorias"/>
+      <field name="state" string="estado"/>
+    </tree>
+  
+  </field>
+  </record>
+
+  <record id="biblioteca_libros_view_form" model="ir.ui.view">
+    <field name="name">biblioteca.libros.form</field>
+    <field name="model">biblioteca.libros</field>
+    <field name="arch" type="xml">
+      <form string="Libros">
+        <sheet>
+          <group>
+            <field name="active" invisible="1"/>  
+            <field name="nombre" string="Titulo" />
+            <field name="autor" />
+            <field name="lanzamiento" />
+          </group>
+          <group>
+            <field name="editorial" />
+            <field name="categorias" />
+            <field name="descripcion" />
+            <field name="state" string="estado" />
+          </group>
+
+        </sheet>
+      </form>
+    </field>
+  </record>
+  
+
+  <record id="biblioteca_libros_view_search" model="ir.ui.view">
+    <field name="name">biblioteca.libros.search</field>
+    <field name="model">biblioteca.libros</field>
+    <field name="arch" type="xml">
+      <search string="propiedades de busqueda">
+        <field name="nombre"/>
+        <field name="autor"/>
+        <field name="lanzamiento"/>
+        <field name="editorial"/>
+        <field name="categorias"/>
+        <field name="descripcion"/>
+        <field name="Disponibilidad" name="disponible" domain="[('state), 'in', ['prestado', 'disponible'])]"  />
+      </search>
+
+    </field>
+  </record>
+
+</odoo>

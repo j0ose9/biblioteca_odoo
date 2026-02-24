@@ -4,8 +4,8 @@ class BibliotecaLibros(models.Model):
   _name="biblioteca.libros"
   _description="Libros de la biblioteca"
 
-  nombre= fields.Char(required="True")
-  lanzamiento = fields.Integer(required="True")
+  nombre= fields.Char(required=True)
+  lanzamiento = fields.Integer(required=True)
   descripcion =fields.Char()
   active =fields.Boolean(default=True)
   state = fields.Selection ([

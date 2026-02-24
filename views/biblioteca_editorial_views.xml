@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<odoo>
+  <record id="biblioteca_editorial_action" model="ir.actions.act_window">
+    <field name="name">Editoriales de libros</field>
+    <field name="res_model">biblioteca.editorial</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Define las editoriales de los libros aquí
+      </p>
+    </field>
+  </record>
+
+
+  <record id="biblioteca_editorial_view_form" model="ir.ui.view">
+  <field name="name">biblioteca.editorial.form</field>
+  <field name="model">biblioteca.editorial</field>
+  <field name="arch" type="xml">
+    <form string="Editorial">
+      <sheet>
+        <div class="oe_title">
+          <h1><field name="nombre" placeholder="Editoriales de libros"/></h1>
+        </div>
+      </sheet>
+    </form> 
+  </field>
+  </record>
+</odoo>
